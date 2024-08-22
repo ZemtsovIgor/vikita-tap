@@ -1,0 +1,30 @@
+{
+  "common": {
+    "tasks": {
+      "one": "task",
+      "many": "tasks",
+      "other": "tasks"
+    }
+  },
+  "menu": {
+    "home": "Home",
+    "energy": "Energy",
+    "friends": "Friends",
+    "tasks": "Tasks"
+  },
+  "home": {
+    "balance": "Your balance",
+    "energy": {
+      "title": "Energy",
+      "description": "Energy refills every 8 hours"
+    }
+  },
+  "referrals": {
+    "title": "Referrals",
+    "description": "You and your friend get 50 points per invite, and 100 points for a friend with Telegram Premium"
+  },
+  "tasks": {
+    "title": "Tasks",
+    "description": "Earn more points by completing tasks!"
+  }
+}

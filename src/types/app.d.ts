@@ -1,0 +1,5 @@
+export enum LOADING_TYPES {
+  NOT_LOADED = 'NOT_LOADED',
+  LOADING = 'LOADING',
+  LOADED = 'LOADED',
+}

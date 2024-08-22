@@ -1,0 +1,64 @@
+{
+  "name": "Vikita",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.14.18",
+    "@mui/styles": "^5.14.18",
+    "@reduxjs/toolkit": "^2.2.5",
+    "@types/node": "^16.18.3",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "antd": "^5.0.1",
+    "antd-mobile": "^5.33.0",
+    "framer-motion": "^11.2.10",
+    "i18next": "^23.7.7",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.5.0",
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "5.0.1",
+    "react-spring": "^9.7.3",
+    "redux-saga": "^1.3.0",
+    "redux-thunk": "^3.1.0",
+    "styled-components": "^6.1.1",
+    "styled-normalize": "^8.1.0",
+    "typescript": "^4.9.3"
+  },
+  "scripts": {
+    "start": "REACT_APP_PIZZA_VERSION=$(date +%s) react-scripts start",
+    "build": "REACT_APP_PIZZA_VERSION=$(date +%s) react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "homepage": "./",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/lodash": "^4.14.202"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

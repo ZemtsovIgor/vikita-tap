@@ -1,0 +1,9 @@
+export const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
+export const TELEGRAM_API_URL = process.env.REACT_APP_TELEGRAM_API_URL;
+export const WS_URL: string = process.env.REACT_APP_WS_URL || '';
+export const API_URL: string = process.env.REACT_APP_API_URL || '';
+export const WS_API_URL: string = process.env.REACT_APP_WS_API_URL || '';
+export const K_ID: string = process.env.REACT_APP_K_ID || '';
+export const K_PUBLIC: string = process.env.REACT_APP_K_PUBLIC || '';
+export const K_PRIVATE: string = process.env.REACT_APP_K_PRIVATE || '';
+export const BOT_URL: string = process.env.REACT_APP_BOT_URL || '';

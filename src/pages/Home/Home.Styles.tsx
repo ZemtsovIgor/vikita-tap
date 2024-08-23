@@ -4,9 +4,14 @@ export const HomeContainer: any = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 3vmin 4.5vmin 0;
+  background: linear-gradient(0deg, var(--tg-theme-blue-bg-color) 30%,  var(--tg-theme-background) 100%);
   
   .home {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 3vmin 4.5vmin 0;
+    
     &-bottom {
       display: flex;
       margin-bottom: 2vmin;

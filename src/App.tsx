@@ -14,6 +14,7 @@ import HomeApp from "./pages/Home/Home"
 // import Referrals from "./pages/Referrals/Referrals"
 // import Earn from "./pages/Earn/Earn";
 import Unknown from "./pages/Unknown";
+import Friends from "./pages/Friends/Friends";
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
               } />
               <Route path={PATHS.REF} element={
                 <Layout>
-                  <Unknown />
+                  <Friends />
                 </Layout>
               } />
               <Route path={PATHS.EARN} element={

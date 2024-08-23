@@ -73,7 +73,7 @@ const Friends: FC<Props> = () => {
         <div className="friends-actions">
           <Button
             as={Link}
-            to={`https://t.me/share/url?url=${BOT_URL}?start=${uid}&text=${t('share.text')}`}
+            to={`https://t.me/share/url?url=${BOT_URL}?start=${uid}`}
             className="friends-actions__btn"
           >
             Invite a friend

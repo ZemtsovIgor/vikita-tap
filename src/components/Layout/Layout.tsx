@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 
 import {MainContainer, Content} from './Layout.Styles';
-import Menu from "../Menu/Menu";
 import {AppStateType} from "../../store";
 import {connect} from "react-redux";
 import {AppReducerState} from "../../store/app/reducers";
@@ -55,7 +54,6 @@ const Layout: React.FC<Props> = (props: Props) => {
         <Content className="content">
           {children}
         </Content>
-        <Menu />
       </MainContainer>
     </>
   ) : (

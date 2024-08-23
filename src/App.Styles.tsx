@@ -29,10 +29,11 @@ export const GlobalStyle: any = createGlobalStyle`
     width: 100%;
     height: 100%;
     background: var(--tg-theme-background);
+    overflow: hidden;
   }
 
   body {
-    background: linear-gradient(0deg, var(--tg-theme-blue-bg-color) 30%,  var(--tg-theme-background) 100%);
+    background: var(--tg-theme-background);
     font-family: var(--default-font);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -3,10 +3,6 @@ import styled from 'styled-components';
 export const BannerContainer: any = styled.div`
   display: flex;
   justify-content: center;
-  border: 1px solid #b51752;
-  background: #b51752;
-  padding: 1.5vmin;
-  border-radius: 4vmin;
   margin-top: 5vmin;
   
   .banner {
@@ -23,6 +19,7 @@ export const BannerContainer: any = styled.div`
     }
     
     &-link {
+      width: 100%;
       text-decoration: none;
     }
     

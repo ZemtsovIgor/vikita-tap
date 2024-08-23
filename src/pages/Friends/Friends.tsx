@@ -90,7 +90,7 @@ const Friends: FC<Props> = () => {
         </div>
         <div className="friends-list">
           <div className="friends-list__description">
-            <span className="friends-list__description_title">Список друзей ({friends.meta.total || 0})</span>
+            <span className="friends-list__description_title">My friends ({friends.meta.total || 0})</span>
           </div>
           <div
             ref={listContainer}

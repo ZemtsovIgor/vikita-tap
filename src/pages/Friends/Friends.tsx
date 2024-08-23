@@ -113,15 +113,12 @@ const Friends: FC<Props> = () => {
                         />
                       ) : null
                     }
-
+                    <span className="friends-friend__avatar_rank">{friend.state?.rank}</span>
                   </div>
                   <div className="friends-friend__rows">
-                    <div className="friends-friend__rows_side">
+                  <div className="friends-friend__rows_side">
                       <span className="friends-friend__title">{friend.firstname} {friend.lastname}</span>
                       <div className="friends-friend__info">
-                        <div className="friends-friend__role_wrap">
-                          <span className="friends-friend__role">{friend.state?.rank}</span>
-                        </div>
                         <div className="friends-friend__balance">
                           <img
                             alt="Vikita"
@@ -134,7 +131,7 @@ const Friends: FC<Props> = () => {
                     </div>
                     <div className="friends-friend__rows_side">
                       <div className="friends-friend__profit">
-                        <span className="friends-friend__profit_title">Ваш бонус в час</span>
+                        <span className="friends-friend__profit_title">Your hourly bonus</span>
                         <div className="friends-friend__profit_value">
                           <img
                             alt="Vikita"

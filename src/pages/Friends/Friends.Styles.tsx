@@ -80,6 +80,10 @@ export const FriendsWrap: any = styled.div`
       border-radius: 1.5vmin;
 
       &__avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
         width: 17.6vmin;
         height: 17.6vmin;
         //background: rgba(60, 60, 67, 0.29);
@@ -87,8 +91,29 @@ export const FriendsWrap: any = styled.div`
         overflow: hidden;
 
         &_img {
-          width: 100%;
+          width: 15vmin;
           height: auto;
+        }
+
+        &_rank {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          bottom: 0;
+          right: 0;
+          width: 6vmin;
+          height: 6vmin;
+          border-radius: 8vmin;
+          border: 1px solid #ffffff;
+          background-color: #1c1f24;
+          color: #ffffff;
+          cursor: default;
+          font-size: 2.5vmin;
+          letter-spacing: -0.30000001192092896px;
+          font-weight: 700;
+          line-height: 2.5vmin;
+          text-align: center;
         }
       }
 

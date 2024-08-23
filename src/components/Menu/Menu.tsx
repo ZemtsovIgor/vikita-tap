@@ -32,7 +32,7 @@ const Menu: React.FC<Props> = () => {
         <li className={`menu-list__item ${pathname === PATHS.EARN ? '-active' : ''}`}>
           <NavLink
             tabIndex={-1}
-            to={PATHS.ENERGY}
+            to={PATHS.EARN}
             className='menu-list__link'
           >
             <div className="menu-list__icon">

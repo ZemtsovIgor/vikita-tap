@@ -28,7 +28,7 @@ export const GlobalStyle: any = createGlobalStyle`
     padding: 0;
     width: 100%;
     height: 100%;
-    background: var(--tg-theme-secondary-bg-color);
+    background: var(--tg-theme-background);
   }
 
   body {

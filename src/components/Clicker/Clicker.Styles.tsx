@@ -68,7 +68,7 @@ export const ClickerSpark: any = styled.div<{ x?: number; y?: number; }>`
 export const ClickerSparkText: any = styled.span`
   display: block;
   margin-top: -5.5vmin;
-  margin-left: -6vmin;
+  margin-left: -12vmin;
   font-size: 11vmin;
   font-weight: 900;
   line-height: 11vmin;

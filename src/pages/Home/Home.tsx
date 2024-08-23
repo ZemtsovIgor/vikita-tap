@@ -4,6 +4,7 @@ import {Balance, Energy, HomeContainer} from "./Home.Styles";
 import {useTranslation} from "react-i18next";
 import useWebSocket from "../../hooks/useWebSocket";
 import Header from "../../components/Header";
+import Banner from "../../components/Banner";
 const HomeApp: FC = () => {
   const { t } = useTranslation();
   const {
@@ -21,10 +22,11 @@ const HomeApp: FC = () => {
         <img
           alt="Vikita"
           className="balance-img"
-          src="/img/coin.png"
+          src="/img/clicker.png"
         />
         <span className="balance">{points}</span>
       </Balance>
+      <Banner />
       <Clicker/>
       <div className="home-bottom">
         <Energy>

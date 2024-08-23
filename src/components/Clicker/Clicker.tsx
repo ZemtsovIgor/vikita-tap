@@ -80,7 +80,7 @@ export const Clicker: FC = () => {
       const newItem = {
         text: `+${tapThreshold}`,
         x: clientX,
-        y: clientY,
+        y: clientY - 100,
         timeStamp: Date.now()
       };
 
@@ -101,7 +101,7 @@ export const Clicker: FC = () => {
         <img
           alt="Vikita"
           className="clicker-img"
-          src="/img/body.png"
+          src="/img/clicker.png"
         />
 
         <div

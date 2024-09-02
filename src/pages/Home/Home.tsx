@@ -29,7 +29,7 @@ const HomeApp: FC = () => {
             className="lab-btn"
             to={PATHS.TAP}
           >
-            Лаборатория
+            Laboratory
           </Button>
         </div>
       </div>
@@ -37,13 +37,13 @@ const HomeApp: FC = () => {
         <div className="planet">
           <div className="planet-left">
             <div className="planet-description">
-              <span className="planet-description__text">Пробуди в себе силу и спаси свой мир!</span>
+              <span className="planet-description__text">Awaken the power within you and save your world!</span>
               <PlanetBtn
                 className="planet-description__btn"
                 disabled={true}
               >
-                Планета vikita
-                <span className="soon">Скоро</span>
+                Planet vikita
+                <span className="soon">Soon</span>
               </PlanetBtn>
             </div>
           </div>

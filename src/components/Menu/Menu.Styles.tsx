@@ -1,23 +1,19 @@
 import styled from 'styled-components';
 
 export const MenuContainer: any = styled.div`
-  //display: flex;
-  //position: sticky;
-  //bottom: 0;
-  //margin-top: auto;
   padding: 0 4.5vmin 2vmin;
   margin-bottom: 2vmin;
-  height: 17vmin;
+  height: 14vmin;
 
   .menu {
     &-list {
-      height: 14vmin;
+      height: 11vmin;
       display: flex;
       flex-wrap: wrap;
       margin: 0;
       padding: 1.5vmin;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 4vmin;
+      background: rgba(51, 87, 131, 0.5);
+      border-radius: 2vmin;
 
       &__link {
         display: flex;
@@ -26,7 +22,7 @@ export const MenuContainer: any = styled.div`
         justify-content: center;
         height: 100%;
         text-decoration: none;
-        border-radius: 4vmin;
+        border-radius: 2vmin;
 
         &:hover {
           opacity: 0.8;
@@ -59,6 +55,7 @@ export const MenuContainer: any = styled.div`
         font-size: 2.75vmin;
         font-weight: 500;
         line-height: 2.75vmin;
+        text-transform: lowercase;
       }
 
       &__item {

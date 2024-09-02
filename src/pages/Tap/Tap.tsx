@@ -18,30 +18,31 @@ const Tap: FC = () => {
 
   return (
     <TapContainer>
-      <div className="home">
-        <Header />
-        <Balance>
-          <img
-            alt="Vikita"
-            className="balance-img"
-            src="/img/clicker.png"
-          />
-          <span className="balance">{points}</span>
-        </Balance>
-        <Banner />
-        <Clicker/>
-        <div className="home-bottom">
-          <Energy>
+      <div className="tap">
+        <Header className="tap-header" />
+        <div className="tap-content">
+          <Balance>
             <img
               alt="Vikita"
-              className="energy-img"
-              src="/img/energy.png"
+              className="balance-img"
+              src="/img/vikita.png"
             />
-            <span className="energy">{availableEnergy}/{energyThreshold}</span>
-          </Energy>
+            <span className="balance">{points}</span>
+          </Balance>
+          <Clicker/>
+          <div className="tap-bottom">
+            <Energy>
+              <img
+                alt="Vikita"
+                className="energy-img"
+                src="/img/energy.png"
+              />
+              <span className="energy">{availableEnergy}/{energyThreshold}</span>
+            </Energy>
+          </div>
+          <Menu />
         </div>
       </div>
-      <Menu />
     </TapContainer>
   );
 };

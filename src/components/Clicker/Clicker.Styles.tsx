@@ -28,7 +28,7 @@ export const ClickerContainer: any = styled.div`
     
     &-img {
       width: auto;
-      height: calc(100vh - 51vh);
+      height: calc(100vh - 64vh);
       max-height: 100vw;
       transform: none;
       z-index: 1;

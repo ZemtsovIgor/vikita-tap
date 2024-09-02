@@ -4,17 +4,32 @@ export const TapContainer: any = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: linear-gradient(0deg, var(--tg-theme-blue-bg-color) 30%,  var(--tg-theme-background) 100%);
-  
-  .home {
+  background: #000000;
+
+  .tap {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 3vmin 4.5vmin 0;
+    padding: 0;
+    
+    &-header {
+      padding: 4vmin 4.5vmin 4vmin;
+    }
+    
+    &-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      border: 2px solid #3D83C0;
+      border-top-left-radius: 5vmin;
+      border-top-right-radius: 5vmin;
+      box-shadow: 0 10px 70px 0 #3D83C0 inset;
+    }
     
     &-bottom {
       display: flex;
-      margin-bottom: 2vmin;
+      justify-content: center;
+      margin-bottom: 5.5vmin;
     }
   }
 `;
@@ -24,28 +39,19 @@ export const Balance: any = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 5vmin;
-  margin-top: 5vmin;
+  margin-top: 7.5vmin;
 
   .balance {
     font-size: 8vmin;
-    font-weight: 600;
+    font-weight: 900;
     line-height: 8vmin;
     text-align: center;
     color: #fff;
     
     &-img {
-      width: 8vmin;
+      width: 11vmin;
       height: auto;
-      margin-right: 3vmin;
-    }
-
-    &-text {
-      font-size: 4.8vmin;
-      font-weight: 400;
-      line-height: 4.8vmin;
-      text-align: center;
-      color: #43434A;
-      margin-top: 4vmin;
+      margin-right: 2vmin;
     }
   }
 `;
@@ -63,7 +69,7 @@ export const Energy: any = styled.div`
     color: #ffffff;
     
     &-img {
-      width: 5vmin;
+      width: 7vmin;
       height: auto;
       margin-right: 1vmin;
     }

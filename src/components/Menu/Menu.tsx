@@ -6,6 +6,7 @@ import {MenuContainer} from "./Menu.Styles";
 import { ReactComponent as HomeSVG } from "../../assets/images/home.svg";
 import { ReactComponent as RefSVG } from "../../assets/images/ref.svg";
 import { ReactComponent as EarnSVG } from "../../assets/images/earn.svg";
+import { ReactComponent as WrehouseSVG } from "../../assets/images/warehouse.svg";
 
 
 type Props = {
@@ -26,7 +27,7 @@ const Menu: React.FC<Props> = () => {
             <div className="menu-list__icon">
               <HomeSVG/>
             </div>
-            <span className="menu-list__text">Main</span>
+            <span className="menu-list__text">главная</span>
           </NavLink>
         </li>
         <li className={`menu-list__item ${pathname === PATHS.REF ? '-active' : ''}`}>
@@ -38,7 +39,7 @@ const Menu: React.FC<Props> = () => {
             <div className="menu-list__icon">
               <RefSVG/>
             </div>
-            <span className="menu-list__text">Friends</span>
+            <span className="menu-list__text">друзья</span>
           </NavLink>
         </li>
         <li className={`menu-list__item ${pathname === PATHS.EARN ? '-active' : ''}`}>
@@ -50,7 +51,7 @@ const Menu: React.FC<Props> = () => {
             <div className="menu-list__icon">
               <EarnSVG/>
             </div>
-            <span className="menu-list__text">Missions</span>
+            <span className="menu-list__text">миссии</span>
           </NavLink>
         </li>
         <li className={`menu-list__item ${pathname === PATHS.WAREHOUSE ? '-active' : ''}`}>
@@ -60,9 +61,9 @@ const Menu: React.FC<Props> = () => {
             className='menu-list__link'
           >
             <div className="menu-list__icon">
-              <EarnSVG/>
+              <WrehouseSVG/>
             </div>
-            <span className="menu-list__text">Warehouse</span>
+            <span className="menu-list__text">склад</span>
           </NavLink>
         </li>
       </ul>

@@ -1,5 +1,13 @@
 import {IState, WebSocketWallet} from "../../types/webSocketTypes";
 
+export const formatNumber = (number: number | string, minPrecision = 2, maxPrecision = 2) => {
+  const newNumber = Number(number);
+  const options = {
+    minimumFractionDigits: minPrecision,
+    maximumFractionDigits: maxPrecision,
+  }
+  return newNumber.toLocaleString(undefined, options)
+}
 export const nFormatter = (num: number, digits: number, minPrecision: number = 10000) => {
   const lookup: {value: number, symbol: string}[] = [
     { value: 1e18, symbol: "E" },

@@ -96,8 +96,6 @@ export const Clicker: FC = () => {
         onTouchStart={(event: any) => onTouchStartEvent(event)}
         onClick={(event: any) => onClickEvent(event)}
       >
-        <div className="clicker-shadow"/>
-
         <img
           alt="Vikita"
           className="clicker-img"

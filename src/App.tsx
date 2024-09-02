@@ -10,9 +10,7 @@ import {PATHS} from "./const/paths.constants";
 import i18n from './common/utils/i18n';
 
 import HomeApp from "./pages/Home/Home"
-// import Energy from "./pages/Energy/Energy"
-// import Referrals from "./pages/Referrals/Referrals"
-// import Earn from "./pages/Earn/Earn";
+import Tap from "./pages/Tap/Tap";
 import Unknown from "./pages/Unknown";
 import Friends from "./pages/Friends/Friends";
 
@@ -34,12 +32,22 @@ function App() {
                   <HomeApp />
                 </Layout>
               } />
+              <Route path={PATHS.TAP} element={
+                <Layout>
+                  <Tap />
+                </Layout>
+              } />
               <Route path={PATHS.REF} element={
                 <Layout>
                   <Friends />
                 </Layout>
               } />
               <Route path={PATHS.EARN} element={
+                <Layout>
+                  <Unknown />
+                </Layout>
+              } />
+              <Route path={PATHS.WAREHOUSE} element={
                 <Layout>
                   <Unknown />
                 </Layout>

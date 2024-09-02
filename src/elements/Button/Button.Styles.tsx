@@ -32,5 +32,6 @@ export const ButtonContainer: any = styled.button`
   &:disabled,
   &[disabled] {
     cursor: not-allowed;
+    opacity: .7;
   }
 `;

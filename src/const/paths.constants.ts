@@ -1,6 +1,7 @@
 export enum PATHS {
   HOME = '/',
-  ENERGY = '/energy',
+  TAP = '/tap',
   REF = '/ref',
-  EARN = '/earn'
+  EARN = '/earn',
+  WAREHOUSE = '/warehouse'
 }

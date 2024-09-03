@@ -33,7 +33,7 @@ export const TapContainer: any = styled.div`
     }
   }
 `;
-export const Balance: any = styled.div`
+export const Balance: any = styled.div<{ balancelength?: number; }>`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -47,6 +47,7 @@ export const Balance: any = styled.div`
     line-height: 8vmin;
     text-align: center;
     color: #fff;
+    width: ${props => props.balancelength ? props.balancelength * 7 : 0}vmin;
     
     &-img {
       width: 11vmin;

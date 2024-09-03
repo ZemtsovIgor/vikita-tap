@@ -21,7 +21,7 @@ const Tap: FC = () => {
       <div className="tap">
         <Header className="tap-header" />
         <div className="tap-content">
-          <Balance>
+          <Balance balancelength={points.toString().length}>
             <img
               alt="Vikita"
               className="balance-img"

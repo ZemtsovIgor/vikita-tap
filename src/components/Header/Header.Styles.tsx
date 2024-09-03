@@ -40,6 +40,7 @@ export const HeaderContainer: any = styled.div`
         -o-object-fit: cover;
         object-fit: cover;
         width: 100%;
+        border-radius: 50%;
       }
     }
     

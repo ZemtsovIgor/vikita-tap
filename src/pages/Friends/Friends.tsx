@@ -14,7 +14,6 @@ import {LOADING_TYPES} from "../../types/app.d";
 import {DEFAULT_FRIENDS_LOADING_LIMIT} from "../../const/app.constants";
 import {WebSocketPaginator} from "../../types/webSocketTypes";
 import Menu from "../../components/Menu/Menu";
-import Header from "../../components/Header";
 
 interface Props {
 }
@@ -69,7 +68,28 @@ const Friends: FC<Props> = () => {
   return (
     <FriendsWrap>
       <div className="friends-wrapper">
-        <Header/>
+        <div className="friends-header">
+          <span className="friends-header__title">Friends</span>
+          <p className="friends-header__description">Invite your friends and play together. Get 20% of your referrals' claims.</p>
+        </div>
+        <div className="friends-counts">
+          <div className="friends-count">
+            <span className="friends-count__title">total friends</span>
+            <div className="friends-count__container">
+              <div className="friends-count__wrap">
+                <span className="friends-count__text">{friends.meta.total}</span>
+              </div>
+            </div>
+          </div>
+          <div className="friends-count -tockens">
+            <span className="friends-count__title">tokens received</span>
+            <div className="friends-count__container">
+              <div className="friends-count__wrap">
+                <span className="friends-count__text">0,000 ZP</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="friends-actions">
           <Button
             as={Link}
@@ -88,76 +108,84 @@ const Friends: FC<Props> = () => {
             </div>
           </Button>
         </div>
-        <div className="friends-list">
-          <div className="friends-list__description">
-            <span className="friends-list__description_title">My friends ({friends.meta.total || 0})</span>
-          </div>
-          <div
-            ref={listContainer}
-            className="friends-list__wrap"
-            onScroll={handleScroll}
-          >
-            {
-              friends.list.map((friend: FRIEND, index: number) => (
-                <div
-                  key={`friend-${index}`}
-                  className="friends-friend"
-                >
-                  <div className="friends-friend__avatar">
-                    {
-                      friend.uid ? (
-                        <img
-                          alt=""
-                          className="friends-friend__avatar_img"
-                          src={`${API_URL}/api/v1/a/clients/${friend.uid}/avatar?w=160&h=160`}
-                        />
-                      ) : null
-                    }
-                    <span className="friends-friend__avatar_rank">{friend.state?.rank}</span>
-                  </div>
-                  <div className="friends-friend__rows">
-                  <div className="friends-friend__rows_side">
-                      <span className="friends-friend__title">{friend.firstname} {friend.lastname}</span>
-                      <div className="friends-friend__info">
-                        <div className="friends-friend__balance">
-                          <img
-                            alt="Vikita"
-                            className="friends-friend__balance_icon"
-                            src="/img/clicker.png"
-                          />
-                          {nFormatter(friend.state?.points || 0, 1, 3)}
+        <div className="friends-list__description">
+          <span className="friends-list__description_title">My friends</span>
+        </div>
+        <div className="friends-list__container">
+          <div className="friends-list">
+            <div
+              ref={listContainer}
+              className="friends-list__wrap"
+              onScroll={handleScroll}
+            >
+              {
+                friends.list.map((friend: FRIEND, index: number) => (
+                  <div
+                    key={`friend-${index}`}
+                    className="friends-friend"
+                  >
+                    <div
+                      className="friends-friend__container"
+                    >
+                      <div className="friends-friend__avatar">
+                        {
+                          friend.uid ? (
+                            <img
+                              alt=""
+                              className="friends-friend__avatar_img"
+                              src={`${API_URL}/api/v1/a/clients/${friend.uid}/avatar?w=160&h=160`}
+                            />
+                          ) : null
+                        }
+                        <div className="friends-friend__avatar_rank_container">
+                          <span className="friends-friend__avatar_rank">{friend.state?.rank}</span>
+                        </div>
+                      </div>
+                      <div className="friends-friend__rows">
+                        <div className="friends-friend__rows_side">
+                          <span className="friends-friend__title">{friend.firstname} {friend.lastname}</span>
+                          <div className="friends-friend__info">
+                            <div className="friends-friend__balance">
+                              <img
+                                alt="Vikita"
+                                className="friends-friend__balance_icon"
+                                src="/img/vikita.png"
+                              />
+                              {nFormatter(friend.state?.points || 0, 1, 3)}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="friends-friend__rows_side">
+                          <div className="friends-friend__profit">
+                            <span className="friends-friend__profit_title">Your hourly bonus</span>
+                            <div className="friends-friend__profit_value">
+                              <img
+                                alt="Vikita"
+                                className="friends-friend__profit__icon"
+                                src="/img/vikita.png"
+                              />
+                              +{nFormatter(friend.state?.pointsBonusHourlyRate || 0, 1, 3)}
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="friends-friend__rows_side">
-                      <div className="friends-friend__profit">
-                        <span className="friends-friend__profit_title">Your hourly bonus</span>
-                        <div className="friends-friend__profit_value">
-                          <img
-                            alt="Vikita"
-                            className="friends-friend__profit__icon"
-                            src="/img/clicker.png"
-                          />
-                          +{nFormatter(friend.state?.pointsBonusHourlyRate || 0, 1, 3)}
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                </div>
-              ))
-            }
+                ))
+              }
 
-            {
-              friends.loaded === LOADING_TYPES.LOADING ? (
-                <Loader/>
-              ) : null
-            }
+              {
+                friends.loaded === LOADING_TYPES.LOADING ? (
+                  <Loader/>
+                ) : null
+              }
+            </div>
           </div>
+          <Menu/>
         </div>
       </div>
-      <Menu/>
     </FriendsWrap>
-  );
+);
 };
 
 export default Friends;

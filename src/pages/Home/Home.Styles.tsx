@@ -68,7 +68,7 @@ export const HomeContainer: any = styled.div`
       border-top-left-radius: 5vmin;
       border-top-right-radius: 5vmin;
       background: #000000;
-      border: 2px solid #3D83C0;
+      border-top: 2px solid #3D83C0;
       box-shadow: 0 10px 70px 0 #3D83C0 inset;
       padding: 9vmin 5vmin;
     }

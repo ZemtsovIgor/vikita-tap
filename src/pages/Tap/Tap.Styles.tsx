@@ -20,7 +20,7 @@ export const TapContainer: any = styled.div`
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      border: 2px solid #3D83C0;
+      border-top: 2px solid #3D83C0;
       border-top-left-radius: 5vmin;
       border-top-right-radius: 5vmin;
       box-shadow: 0 10px 70px 0 #3D83C0 inset;
@@ -45,7 +45,7 @@ export const Balance: any = styled.div<{ balancelength?: number; }>`
     font-size: 8vmin;
     font-weight: 900;
     line-height: 8vmin;
-    text-align: center;
+    text-align: left;
     color: #fff;
     width: ${props => props.balancelength ? props.balancelength * 7 : 0}vmin;
     

@@ -55,7 +55,7 @@ export const MenuContainer: any = styled.div`
         font-size: 2.75vmin;
         font-weight: 500;
         line-height: 2.75vmin;
-        text-transform: lowercase;
+        text-transform: capitalize;
       }
 
       &__item {

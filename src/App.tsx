@@ -13,6 +13,7 @@ import HomeApp from "./pages/Home/Home"
 import Tap from "./pages/Tap/Tap";
 import Unknown from "./pages/Unknown";
 import Friends from "./pages/Friends/Friends";
+import Missions from "./pages/Missions/Missions";
 
 function App() {
   return (
@@ -44,7 +45,7 @@ function App() {
               } />
               <Route path={PATHS.EARN} element={
                 <Layout>
-                  <Unknown />
+                  <Missions />
                 </Layout>
               } />
               <Route path={PATHS.WAREHOUSE} element={

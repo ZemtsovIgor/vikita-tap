@@ -3,6 +3,7 @@ import { Select } from './Select/Select';
 import { Modal } from './Modal/Modal';
 import { Button } from './Button/Button';
 import { Loader } from './Loader/Loader';
+import { Toogler } from './Toogler/Toogler';
 
 export {
   Icon,
@@ -10,4 +11,5 @@ export {
   Modal,
   Button,
   Loader,
+  Toogler
 };

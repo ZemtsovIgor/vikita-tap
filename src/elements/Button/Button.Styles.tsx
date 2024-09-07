@@ -34,4 +34,17 @@ export const ButtonContainer: any = styled.button`
     cursor: not-allowed;
     opacity: .7;
   }
+
+  &.-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      margin-left: 10px;
+      width: 16px;
+      height: 16px;
+      stroke: #ffffff;
+    }
+  }
 `;

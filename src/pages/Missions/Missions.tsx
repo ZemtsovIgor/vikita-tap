@@ -78,10 +78,14 @@ const Missions: FC<Props> = () => {
         </div>
         <div className="missions-count__hold">
           <div className="missions-count">
-            <span className="missions-count__title">zp, заработанные за все время</span>
-            <div className="missions-count__container">
-              <div className="missions-count__wrap">
-                <span className="missions-count__text">{missions.meta.total} ZP</span>
+            <div className="missions-count__title_container">
+              <span className="missions-count__title">zp, заработанные за все время</span>
+            </div>
+            <div className="missions-count__container_container">
+              <div className="missions-count__container">
+                <div className="missions-count__wrap">
+                  <span className="missions-count__text">{missions.meta.total} ZP</span>
+                </div>
               </div>
             </div>
           </div>
@@ -125,7 +129,7 @@ const Missions: FC<Props> = () => {
                           <div className="mission-badge">
                             <div className="mission-badge__side">
                               <span className="mission-badge__title">каска lvl 5</span>
-                              <span className="mission-badge__title">+1000ZP</span>
+                              <span className="mission-badge__description">+1000ZP</span>
                             </div>
                             <div className="mission-badge__side">
                               <InfoSVG className="mission-badge__icon"/>

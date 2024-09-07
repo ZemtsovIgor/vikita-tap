@@ -8,15 +8,15 @@ export const TooglerContainer: any = styled.div<{ count?: number; position?: num
   position: relative;
 
   .toogler {
-    height: calc(100% - 4vmin);
+    height: calc(100% - 2vmin);
     width: calc(${props => props.count ? `100% / ${props.count} - 1vmin` : '50%'});
     background: linear-gradient(90deg, #FFD519 0%, #E40592 100%);
     border-radius: 3vmin;
     position: absolute;
     left: calc(${props => props.count && props.position ? `100% / ${props.count} * ${props.position}` : '0.5vmin'});
-    top: 1vmin;
+    top: 0.5vmin;
     transition: ease-in;
-    padding: 1vmin;
+    padding: 0.5vmin;
     
     &-container {
       border-radius: 3vmin;
@@ -31,18 +31,18 @@ export const TooglerContainer: any = styled.div<{ count?: number; position?: num
       justify-content: center;
       position: absolute;
       border-radius: 50%;
-      width: 8vmin;
-      height: 8vmin;
-      top: -2vmin;
-      left: -2vmin;
+      width: 4vmin;
+      height: 4vmin;
+      top: 0;
+      left: 0;
       background: #FFD519;
       z-index: 2;
 
       &__text {
-        font-size: 12px;
+        font-size: 2vmin;
         font-weight: 900;
-        line-height: 12px;
-        letter-spacing: 0.03em;
+        line-height: 2vmin;
+        letter-spacing: 0.01vmin;
         color: #000000;
       }
     }
@@ -79,12 +79,14 @@ export const TooglerContainer: any = styled.div<{ count?: number; position?: num
     }
 
     &-label {
-      padding: 2vmin 0;
+      padding-top: 0.6vmin;
+      padding-bottom: 1.3vmin;
+      
       &__text {
-        font-size: 16px;
+        font-size: 2.6vmin;
         font-weight: 500;
-        line-height: 16px;
-        letter-spacing: 0.03em;
+        line-height: 2.6vmin;
+        letter-spacing: 0.1vmin;
         color: #ffffff;
       }
     }

@@ -5,6 +5,9 @@ import ru from '../../assets/locales/ru/translation.json';
 import pt from '../../assets/locales/pt/translation.json';
 import cn from '../../assets/locales/cn/translation.json';
 
+// @ts-ignore
+const webApp = window.Telegram?.WebApp;
+
 export const LANGUAGES = new Map([
   ['en', 'English'],
   ['ru', 'Русский'],
@@ -32,6 +35,7 @@ i18n
   .init({
     debug: false,
     fallbackLng: 'en',
+    lng: String(webApp.initDataUnsafe?.user?.language_code || 'en'),
     supportedLngs: Array.from(LANGUAGES.keys()),
     resources: resources,
   });

@@ -1,8 +1,8 @@
 {
   "menu": {
     "home": "Home",
-    "friends": "Friends",
-    "missions": "Mission",
+    "friends": "Frens",
+    "missions": "Missions",
     "warehouse": "Store"
   },
   "home": {
@@ -23,7 +23,7 @@
   },
   "missions": {
     "title": "Missions",
-    "description": "Do tasks and earn ZP Check your tasks completion daily",
+    "description": "Do tasks and earn ZP<br />Check your tasks completion daily",
     "earned": "ZP, earned",
     "tasks": {
       "description": {

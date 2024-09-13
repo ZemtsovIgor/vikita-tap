@@ -98,6 +98,7 @@ export const FriendsWrap: any = styled.div`
         line-height: 2.5vmin;
         letter-spacing: 0.01vmin;
         color: #FFFFFF;
+        white-space: nowrap;
       }
     }
 

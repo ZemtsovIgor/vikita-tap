@@ -1,7 +1,7 @@
 import React, {FC, useRef, useState} from 'react';
 import {Button, Loader, Toogler} from "../../elements";
 import { MissionsWrap} from "./Missions.Styles";
-import {useTranslation} from "react-i18next";
+import {Trans, useTranslation} from "react-i18next";
 import {LOADING_TYPES} from "../../types/app.d";
 import Menu from "../../components/Menu/Menu";
 import {MISSION} from "../../types/missions";
@@ -75,7 +75,7 @@ const Missions: FC<Props> = () => {
       <div className="missions-wrapper">
         <div className="missions-header">
           <span className="missions-header__title">{t('missions.title')}</span>
-          <p className="missions-header__description">{t('missions.description')}</p>
+          <p className="missions-header__description" dangerouslySetInnerHTML={{__html: t('missions.description')}} />
         </div>
         <div className="missions-count__hold">
           <div className="missions-count">

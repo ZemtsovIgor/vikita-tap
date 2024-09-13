@@ -8,5 +8,6 @@ export interface MISSION {
   verification?: boolean;
   done?: boolean;
   level?: number | null;
+  link?: string | null;
 }
 

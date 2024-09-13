@@ -21,30 +21,26 @@ const missions = {
   meta: {
     limit: 5,
     offset: 0,
-    total: 0
+    total: 2
   },
   list: [
     {
       id: '1',
-      title: 'title',
-      description: 'description description description description description description description description description',
+      title: 'Subscribe to our Telegram',
       reward: 500,
-      start: '00.00.0000 00:00',
-      end: '00.00.0000 00:00',
       verification:false,
       done: false,
-      level: 5
+      level: 1,
+      link: 'https://t.me/VikitaMeme'
     },
     {
       id: '1',
-      title: 'title',
-      description: 'description description description description description description description description description',
-      reward: 500,
-      start: '00.00.0000 00:00',
-      end: '00.00.0000 00:00',
+      title: 'Follow us on X<br />(formerly Twitter)',
+      reward: 1000,
       verification:false,
       done: false,
-      level: 5
+      level: 2,
+      link: 'https://x.com/vikitameme'
     }
   ]
 }
@@ -85,7 +81,7 @@ const Missions: FC<Props> = () => {
             <div className="missions-count__container_container">
               <div className="missions-count__container">
                 <div className="missions-count__wrap">
-                  <span className="missions-count__text">{missions.meta.total} ZP</span>
+                  <span className="missions-count__text">{missions.meta.offset} V</span>
                 </div>
               </div>
             </div>
@@ -108,7 +104,7 @@ const Missions: FC<Props> = () => {
                 ]
               }
               activeValue={missionType}
-              badgeLabel='22'
+              badgeLabel={missions.meta.total}
               onChange={(val: string) => onChangeMissionsType(val)}
             />
           </div>
@@ -130,7 +126,7 @@ const Missions: FC<Props> = () => {
                           <div className="mission-badge">
                             <div className="mission-badge__side">
                               <span className="mission-badge__title">{t('missions.tasks.task.level')} {mission.level}</span>
-                              <span className="mission-badge__description">+{mission.reward}ZP</span>
+                              <span className="mission-badge__description">+{mission.reward}V</span>
                             </div>
                             <div className="mission-badge__side">
                               <InfoSVG className="mission-badge__icon"/>
@@ -139,10 +135,12 @@ const Missions: FC<Props> = () => {
                         </div>
                         <div className="mission-rows">
                           <div className="mission-rows__side">
-                            <span className="mission-title">{mission.title}</span>
-                            <p className="mission-description">{mission.description}</p>
-                            <span className="mission-reward">{t('missions.tasks.task.reward')}: {mission.reward}zp</span>
-                            <span className="mission-interval">00.00.0000 00:00 UTC - 00.00.0000 00:00 UTC</span>
+                            <span className="mission-title" dangerouslySetInnerHTML={{__html: mission.title || ''}} />
+                            {mission.description ? (
+                              <p className="mission-description">{mission.description}</p>) : null}
+                            <span
+                              className="mission-reward">{t('missions.tasks.task.reward')}: {mission.reward}V</span>
+                            {mission.start && mission.end ? (<span className="mission-interval">{mission.start} UTC - {mission.end} UTC</span>): null}
                           </div>
                           <div className="mission-rows__side">
                             <img
@@ -155,8 +153,9 @@ const Missions: FC<Props> = () => {
                         <div className="mission-actions">
                           <Button
                             as={Link}
-                            to="#"
+                            to={mission.link}
                             className="mission-actions__btn"
+                            target="_blank"
                           >
                             {t('missions.tasks.task.actions.start')}
                           </Button>

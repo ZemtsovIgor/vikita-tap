@@ -223,7 +223,7 @@ export const MissionsWrap: any = styled.div`
     &-container {
       display: flex;
       flex-direction: column;
-      padding: 5vmin 5vmin 7vmin 5vmin;
+      padding: 8vmin 5vmin 7vmin 5vmin;
       background: #000000;
       border-top-left-radius: 4vmin;
       border-top-right-radius: 4vmin;

@@ -10,7 +10,7 @@ interface Props {
     value: string;
   }[];
   activeValue: string;
-  badgeLabel?: string;
+  badgeLabel?: number;
   onChange: (val: string) => void;
 }
 

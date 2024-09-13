@@ -35,7 +35,7 @@ i18n
   .init({
     debug: false,
     fallbackLng: 'en',
-    lng: String(webApp.initDataUnsafe?.user?.language_code || 'en'),
+    // lng: String(webApp.initDataUnsafe?.user?.language_code || 'en'),
     supportedLngs: Array.from(LANGUAGES.keys()),
     resources: resources,
   });

@@ -1,7 +1,7 @@
 import React, {FC, useRef, useState} from 'react';
 import {Button, Loader, Toogler} from "../../elements";
 import { MissionsWrap} from "./Missions.Styles";
-import {Trans, useTranslation} from "react-i18next";
+import {useTranslation} from "react-i18next";
 import {LOADING_TYPES} from "../../types/app.d";
 import Menu from "../../components/Menu/Menu";
 import {MISSION} from "../../types/missions";
@@ -26,7 +26,7 @@ const missions = {
   list: [
     {
       id: '1',
-      title: 'Subscribe to our Telegram',
+      title: 'Subscribe to our<br />Telegram',
       reward: 500,
       verification:false,
       done: false,

@@ -239,6 +239,7 @@ export const MissionsWrap: any = styled.div`
       &__side {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
       }
     }
 

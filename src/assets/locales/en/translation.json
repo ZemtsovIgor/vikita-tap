@@ -23,8 +23,8 @@
   },
   "missions": {
     "title": "Missions",
-    "description": "Do tasks and earn ZP<br />Check your tasks completion daily",
-    "earned": "ZP, earned",
+    "description": "Do tasks and earn V<br />Check your tasks completion daily",
+    "earned": "V, earned",
     "tasks": {
       "description": {
         "title": "tasks",

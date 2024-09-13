@@ -7,5 +7,6 @@ export interface MISSION {
   end?: string | null;
   verification?: boolean;
   done?: boolean;
+  level?: number | null;
 }
 

@@ -16,7 +16,7 @@ const HomeApp: FC = () => {
             className="home-title__img"
             src="/img/vikita.png"
           />
-          <span className="home-title__text">Metaverse</span>
+          <span className="home-title__text">{t('home.metaverse')}</span>
         </div>
         <div className="lab">
           <img
@@ -29,7 +29,7 @@ const HomeApp: FC = () => {
             className="lab-btn"
             to={PATHS.TAP}
           >
-            Laboratory
+            {t('home.laboratory')}
           </Button>
         </div>
       </div>
@@ -37,13 +37,13 @@ const HomeApp: FC = () => {
         <div className="planet">
           <div className="planet-left">
             <div className="planet-description">
-              <span className="planet-description__text">Awaken the power within you and save your world!</span>
+              <span className="planet-description__text">{t('home.planet.description')}</span>
               <PlanetBtn
                 className="planet-description__btn"
                 disabled={true}
               >
-                Planet vikita
-                <span className="soon">Soon</span>
+                {t('home.planet.btn')}
+                <span className="soon">{t('home.planet.soon')}</span>
               </PlanetBtn>
             </div>
           </div>

@@ -7,12 +7,14 @@ import { ReactComponent as HomeSVG } from "../../assets/images/home.svg";
 import { ReactComponent as RefSVG } from "../../assets/images/ref.svg";
 import { ReactComponent as EarnSVG } from "../../assets/images/earn.svg";
 import { ReactComponent as WrehouseSVG } from "../../assets/images/warehouse.svg";
+import {useTranslation} from "react-i18next";
 
 
 type Props = {
 };
 
 const Menu: React.FC<Props> = () => {
+  const { t } = useTranslation();
   const { pathname } = useLocation();
 
   return (
@@ -27,7 +29,7 @@ const Menu: React.FC<Props> = () => {
             <div className="menu-list__icon">
               <HomeSVG/>
             </div>
-            <span className="menu-list__text">Main</span>
+            <span className="menu-list__text">{t('menu.home')}</span>
           </NavLink>
         </li>
         <li className={`menu-list__item ${pathname === PATHS.REF ? '-active' : ''}`}>
@@ -39,7 +41,7 @@ const Menu: React.FC<Props> = () => {
             <div className="menu-list__icon">
               <RefSVG/>
             </div>
-            <span className="menu-list__text">Friends</span>
+            <span className="menu-list__text">{t('menu.friends')}</span>
           </NavLink>
         </li>
         <li className={`menu-list__item ${pathname === PATHS.EARN ? '-active' : ''}`}>
@@ -51,7 +53,7 @@ const Menu: React.FC<Props> = () => {
             <div className="menu-list__icon">
               <EarnSVG/>
             </div>
-            <span className="menu-list__text">Missions</span>
+            <span className="menu-list__text">{t('menu.missions')}</span>
           </NavLink>
         </li>
         <li className={`menu-list__item ${pathname === PATHS.WAREHOUSE ? '-active' : ''}`}>
@@ -63,7 +65,7 @@ const Menu: React.FC<Props> = () => {
             <div className="menu-list__icon">
               <WrehouseSVG/>
             </div>
-            <span className="menu-list__text">Warehouse</span>
+            <span className="menu-list__text">{t('menu.warehouse')}</span>
           </NavLink>
         </li>
       </ul>

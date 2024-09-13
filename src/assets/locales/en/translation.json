@@ -1,31 +1,44 @@
 {
-  "common": {
-    "tasks": {
-      "one": "task",
-      "many": "tasks",
-      "other": "tasks"
-    }
-  },
   "menu": {
     "home": "Home",
-    "energy": "Energy",
     "friends": "Friends",
-    "tasks": "Tasks"
+    "missions": "Mission",
+    "warehouse": "Store"
   },
   "home": {
-    "balance": "Your balance",
-    "energy": {
-      "title": "Energy",
-      "description": "Energy refills every 8 hours"
+    "metaverse": "Metaverse",
+    "laboratory": "Laboratory",
+    "planet": {
+      "description": "Start Having Fun",
+      "btn": "Vikita Planet",
+      "soon": "Soon"
     }
   },
-  "referrals": {
-    "title": "Referrals",
-    "description": "You and your friend get 50 points per invite, and 100 points for a friend with Telegram Premium"
+  "friends": {
+    "title": "Friends",
+    "count": "Friends",
+    "received": "Received from friends",
+    "invite": "Invite a friend",
+    "my_friends": "My friends"
   },
-  "tasks": {
-    "title": "Tasks",
-    "description": "Earn more points by completing tasks!"
-  },
-  "title": "Vikita"
+  "missions": {
+    "title": "Missions",
+    "description": "Do tasks and earn ZP Check your tasks completion daily",
+    "earned": "ZP, earned",
+    "tasks": {
+      "description": {
+        "title": "tasks",
+        "active": "active",
+        "completed": "completed"
+      },
+      "task": {
+        "level": "lvl",
+        "reward": "reward",
+        "actions": {
+          "start": "start",
+          "check": "check"
+        }
+      }
+    }
+  }
 }

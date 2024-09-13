@@ -26,23 +26,25 @@ const missions = {
   list: [
     {
       id: '1',
-      title: 'название',
-      description: 'описание описание описание описание описание описание описание описание описание описание описание описание ',
+      title: 'title',
+      description: 'description description description description description description description description description',
       reward: 500,
       start: '00.00.0000 00:00',
       end: '00.00.0000 00:00',
       verification:false,
       done: false,
+      level: 5
     },
     {
       id: '1',
-      title: 'название',
-      description: 'описание описание описание описание описание описание описание описание описание описание описание описание ',
+      title: 'title',
+      description: 'description description description description description description description description description',
       reward: 500,
       start: '00.00.0000 00:00',
       end: '00.00.0000 00:00',
       verification:false,
       done: false,
+      level: 5
     }
   ]
 }
@@ -72,14 +74,13 @@ const Missions: FC<Props> = () => {
     <MissionsWrap>
       <div className="missions-wrapper">
         <div className="missions-header">
-          <span className="missions-header__title">миссии</span>
-          <p className="missions-header__description">Здесь отображаются все миссии. Выполняйте задания и зарабатывайте
-            ZP! Проверка выполнения задания доступна раз в сутки.</p>
+          <span className="missions-header__title">{t('missions.title')}</span>
+          <p className="missions-header__description">{t('missions.description')}</p>
         </div>
         <div className="missions-count__hold">
           <div className="missions-count">
             <div className="missions-count__title_container">
-              <span className="missions-count__title">zp, заработанные за все время</span>
+              <span className="missions-count__title">{t('missions.earned')}</span>
             </div>
             <div className="missions-count__container_container">
               <div className="missions-count__container">
@@ -91,17 +92,17 @@ const Missions: FC<Props> = () => {
           </div>
         </div>
           <div className="missions-list__title_wrap">
-            <span className="missions-list__title">задания</span>
+            <span className="missions-list__title">{t('missions.tasks.description.title')}</span>
             <Toogler
               className="missions-list__title_toogler"
               labels={
                 [
                   {
-                    title: 'активные',
+                    title: t('missions.tasks.description.active'),
                     value: `${MISSIONS_TYPES.ACTIVE}`
                   },
                   {
-                    title: 'завершенные',
+                    title: t('missions.tasks.description.completed'),
                     value: `${MISSIONS_TYPES.FINISHED}`
                   }
                 ]
@@ -128,8 +129,8 @@ const Missions: FC<Props> = () => {
                         <div className="mission-badge__container">
                           <div className="mission-badge">
                             <div className="mission-badge__side">
-                              <span className="mission-badge__title">каска lvl 5</span>
-                              <span className="mission-badge__description">+1000ZP</span>
+                              <span className="mission-badge__title">{t('missions.tasks.task.level')} {mission.level}</span>
+                              <span className="mission-badge__description">+{mission.reward}ZP</span>
                             </div>
                             <div className="mission-badge__side">
                               <InfoSVG className="mission-badge__icon"/>
@@ -140,7 +141,7 @@ const Missions: FC<Props> = () => {
                           <div className="mission-rows__side">
                             <span className="mission-title">{mission.title}</span>
                             <p className="mission-description">{mission.description}</p>
-                            <span className="mission-reward">награда: {mission.reward}zp</span>
+                            <span className="mission-reward">{t('missions.tasks.task.reward')}: {mission.reward}zp</span>
                             <span className="mission-interval">00.00.0000 00:00 UTC - 00.00.0000 00:00 UTC</span>
                           </div>
                           <div className="mission-rows__side">
@@ -157,14 +158,14 @@ const Missions: FC<Props> = () => {
                             to="#"
                             className="mission-actions__btn"
                           >
-                            начать
+                            {t('missions.tasks.task.actions.start')}
                           </Button>
                           <Button
                             as={Link}
                             to="#"
                             className="mission-actions__btn -check -loading"
                           >
-                            проверить
+                            {t('missions.tasks.task.actions.check')}
                             {mission.verification ? <Loader/> : null}
                           </Button>
                         </div>

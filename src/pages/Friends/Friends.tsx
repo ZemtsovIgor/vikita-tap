@@ -69,12 +69,12 @@ const Friends: FC<Props> = () => {
     <FriendsWrap>
       <div className="friends-wrapper">
         <div className="friends-header">
-          <span className="friends-header__title">Friends</span>
-          <p className="friends-header__description">Invite your friends and play together. Get 20% of your referrals' claims.</p>
+          <span className="friends-header__title">{t('friends.title')}</span>
+          {/*<p className="friends-header__description">Invite your friends and play together. Get 20% of your referrals' claims.</p>*/}
         </div>
         <div className="friends-counts">
           <div className="friends-count">
-            <span className="friends-count__title">total friends</span>
+            <span className="friends-count__title">{t('friends.count')}</span>
             <div className="friends-count__container">
               <div className="friends-count__wrap">
                 <span className="friends-count__text">{friends.meta.total}</span>
@@ -82,7 +82,7 @@ const Friends: FC<Props> = () => {
             </div>
           </div>
           <div className="friends-count -tockens">
-            <span className="friends-count__title">tokens received</span>
+            <span className="friends-count__title">{t('friends.received')}</span>
             <div className="friends-count__container">
               <div className="friends-count__wrap">
                 <span className="friends-count__text">0,000 ZP</span>
@@ -96,7 +96,7 @@ const Friends: FC<Props> = () => {
             to={`https://t.me/share/url?url=${BOT_URL}?start=${uid}`}
             className="friends-actions__btn"
           >
-            Invite a friend
+            {t('friends.invite')}
           </Button>
           <Button
             className="friends-actions__btn -copy"
@@ -109,7 +109,7 @@ const Friends: FC<Props> = () => {
           </Button>
         </div>
         <div className="friends-list__description">
-          <span className="friends-list__description_title">My friends</span>
+          <span className="friends-list__description_title">{t('friends.my_friends')}</span>
         </div>
         <div className="friends-list__container">
           <div className="friends-list">

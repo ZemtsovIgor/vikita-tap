@@ -8,10 +8,10 @@ export const TooglerContainer: any = styled.div<{ count?: number; position?: num
   position: relative;
 
   .toogler {
-    height: calc(100% - 2vmin);
+    height: calc(100% - 1.75vmin);
     width: calc(${props => props.count ? `100% / ${props.count} - 1vmin` : '50%'});
     background: linear-gradient(90deg, #FFD519 0%, #E40592 100%);
-    border-radius: 3vmin;
+    border-radius: 4vmin;
     position: absolute;
     left: calc(${props => props.count && props.position ? `100% / ${props.count} * ${props.position}` : '0.5vmin'});
     top: 0.5vmin;
